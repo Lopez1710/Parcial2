@@ -16,7 +16,7 @@ namespace appVenta.Vista
         {
             InitializeComponent();
         }
-
+        public static FrmVenta frmventa = new FrmVenta();
         private void cRUDProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmProducto frm = new FrmProducto();
@@ -47,9 +47,7 @@ namespace appVenta.Vista
 
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmVenta frm = new FrmVenta();
-            frm.MdiParent = this;
-            frm.Show();
+             frmventa.Show();
         }
     }
 }

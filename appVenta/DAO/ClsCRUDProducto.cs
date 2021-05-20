@@ -68,5 +68,18 @@ namespace appVenta.DAO
 
             return lista;
         }
+
+        public List<tb_producto> buscarProducto(string nombre)
+        {
+
+            List<tb_producto> lista = new List<tb_producto>();
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            {
+                lista = (from listaproducto in db.tb_producto
+                         where listaproducto.nombreProducto.Contains(nombre)
+                         select listaproducto).ToList();
+            }
+            return lista;
+        }
     }
 }

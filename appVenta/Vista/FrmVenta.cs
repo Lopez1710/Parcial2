@@ -44,5 +44,11 @@ namespace appVenta.Vista
                 comboBox1.ValueMember = "iDDocumento";
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmBuscarProduto frmBuscar = new FrmBuscarProduto();
+            frmBuscar.Show();
+        }
     }
 }
