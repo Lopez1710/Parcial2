@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace appVenta.Vista
 {
-    public partial class FrmBuscarProduto : Form
+    public partial class FrmBuscarProducto : Form
     {
-        public FrmBuscarProduto()
+        public FrmBuscarProducto()
         {
             InitializeComponent();
         }
@@ -23,19 +23,19 @@ namespace appVenta.Vista
             var clsp = new ClsCRUDProducto();
             dataGridView1.Rows.Clear();
 
-            foreach (var lista in clsp.buscarProducto(txtProducto.Text))
+            foreach(var lista in clsp.buscarProducto(txtNombre.Text))
             {
-                dataGridView1.Rows.Add(lista.idProducto, lista.nombreProducto, lista.precioProducto);
+                dataGridView1.Rows.Add(lista.idProducto,lista.nombreProducto,lista.precioProducto);
             }
-
+            
         }
 
-        private void FrmBuscarProduto_Load(object sender, EventArgs e)
+        private void FrmBuscarProducto_Load(object sender, EventArgs e)
         {
             cargardatos();
         }
 
-        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             string Nombre = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -48,7 +48,7 @@ namespace appVenta.Vista
             this.Close();
         }
 
-        private void txtProducto_TextChanged(object sender, EventArgs e)
+        private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             cargardatos();
         }

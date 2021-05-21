@@ -211,12 +211,12 @@ namespace appVenta.Vista
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Id";
+            this.Column1.HeaderText = "IdProducto";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Producto";
+            this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
             // 
             // Column3
@@ -280,12 +280,12 @@ namespace appVenta.Vista
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox txtId;
-        public System.Windows.Forms.TextBox txtPrecio;
-        public System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.TextBox txtNombre;
     }
 }

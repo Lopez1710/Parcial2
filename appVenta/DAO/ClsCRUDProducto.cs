@@ -69,8 +69,7 @@ namespace appVenta.DAO
             return lista;
         }
 
-        public List<tb_producto> buscarProducto(string nombre)
-        {
+        public List<tb_producto> buscarProducto(string nombre) {
 
             List<tb_producto> lista = new List<tb_producto>();
             using (sistema_ventasEntities db = new sistema_ventasEntities())
@@ -81,5 +80,6 @@ namespace appVenta.DAO
             }
             return lista;
         }
+
     }
 }
