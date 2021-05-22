@@ -35,7 +35,7 @@ namespace appVenta.Vista
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DtgVenta = new System.Windows.Forms.DataGridView();
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@ namespace appVenta.Vista
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,22 +111,22 @@ namespace appVenta.Vista
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 4;
             // 
-            // dataGridView1
+            // DtgVenta
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DtgVenta.AllowUserToAddRows = false;
+            this.DtgVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DtgVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(33, 238);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(855, 150);
-            this.dataGridView1.TabIndex = 6;
+            this.DtgVenta.Location = new System.Drawing.Point(33, 238);
+            this.DtgVenta.Name = "DtgVenta";
+            this.DtgVenta.ReadOnly = true;
+            this.DtgVenta.Size = new System.Drawing.Size(855, 150);
+            this.DtgVenta.TabIndex = 6;
             // 
             // txtBuscarProducto
             // 
@@ -167,6 +167,7 @@ namespace appVenta.Vista
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(119, 20);
             this.txtCantidad.TabIndex = 11;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // txtPrecio
             // 
@@ -181,6 +182,7 @@ namespace appVenta.Vista
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(128, 20);
             this.txtNombre.TabIndex = 13;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label5
             // 
@@ -242,6 +244,7 @@ namespace appVenta.Vista
             this.BtnAgregar.TabIndex = 20;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label10
             // 
@@ -310,7 +313,7 @@ namespace appVenta.Vista
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBuscarProducto);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DtgVenta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
@@ -322,7 +325,7 @@ namespace appVenta.Vista
             this.Text = "Venta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmVenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +338,7 @@ namespace appVenta.Vista
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DtgVenta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;

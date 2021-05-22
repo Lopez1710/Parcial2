@@ -60,5 +60,48 @@ namespace appVenta.Vista
             FrmBuscarProducto frm = new FrmBuscarProducto();
             frm.Show();
         }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double Total, Precio, Cantidad;
+
+                Precio = Convert.ToDouble(txtPrecio.Text);
+                Cantidad = Convert.ToDouble(txtCantidad.Text);
+                Total = Cantidad * Precio;
+                txtTotal.Text = Total.ToString();
+            }
+            catch
+            {
+                if (txtCantidad.Text == "")
+                {
+                    txtCantidad.Text = "0";
+                    txtCantidad.SelectAll();
+                }
+            }
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            DtgVenta.Rows.Add(txtId.Text,txtNombre.Text,txtPrecio.Text,txtCantidad.Text,txtTotal.Text);
+
+            double suma = 0;
+            for(int i = 0; i<DtgVenta.Rows.Count;i++)
+            {
+                string datosaoperar = DtgVenta.Rows[i].Cells[4].Value.ToString();
+
+                suma = suma + Convert.ToDouble(datosaoperar);
+
+                txtTotalVenta.Text = suma.ToString();
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtCantidad.Text = "0";
+            txtCantidad.SelectAll();
+            txtTotal.Text = "0";
+        }
     }
 }
