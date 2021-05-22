@@ -24,8 +24,24 @@ namespace appVenta.Vista
 
         }
 
+        void ultimocorrelativoventa()
+        {
+            ClsDVenta cls = new ClsDVenta();
+            int IdVentaUltimo = 0;
+            foreach (var lista in cls.Ultimaventa())
+            {
+                IdVentaUltimo = lista.iDVenta;
+            }
+
+            IdVentaUltimo = IdVentaUltimo + 1;
+            txtNumeroDoc.Text = IdVentaUltimo.ToString();
+        }
+
         private void FrmVenta_Load(object sender, EventArgs e)
         {
+
+            ultimocorrelativoventa();
+
             ClsCRUDCliente clsCliente = new ClsCRUDCliente();
 
                 comboBox2.DataSource = clsCliente.Mostrar();
