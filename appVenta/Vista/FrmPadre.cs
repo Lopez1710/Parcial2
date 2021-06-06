@@ -18,6 +18,7 @@ namespace appVenta.Vista
         }
         
         public static FrmVenta frmventa = new FrmVenta();
+
         private void cRUDProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmProducto frm = new FrmProducto();

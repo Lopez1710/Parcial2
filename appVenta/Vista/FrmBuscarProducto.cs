@@ -44,7 +44,7 @@ namespace appVenta.Vista
             FrmPadre.frmventa.txtId.Text = id;
             FrmPadre.frmventa.txtNombre.Text = Nombre;
             FrmPadre.frmventa.txtPrecio.Text = Precio;
-
+            FrmPadre.frmventa.txtCantidad.Focus();
             this.Close();
         }
 

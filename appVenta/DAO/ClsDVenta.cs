@@ -18,5 +18,20 @@ namespace appVenta.DAO
             }
                 return lista;
         }
+
+        public void save(tb_venta ventas)
+        {
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            {
+                tb_venta venta = new tb_venta();
+                venta.iDDocumento = ventas.iDDocumento;
+                venta.iDCliente = ventas.iDCliente;
+                venta.iDUsuario = ventas.iDUsuario;
+                venta.totalVenta = ventas.totalVenta;
+                venta.fecha = ventas.fecha;
+                db.tb_venta.Add(venta);
+                db.SaveChanges();
+            }
+        }
     }
 }

@@ -81,5 +81,18 @@ namespace appVenta.DAO
             return lista;
         }
 
+        public List<tb_producto> buscarproductoid (int codigo)
+        {
+            List<tb_producto> lista = new List<tb_producto>();
+            using (sistema_ventasEntities db = new sistema_ventasEntities())
+            {
+                lista = (from listaproducto in db.tb_producto
+                         where listaproducto.idProducto == codigo
+                         select listaproducto).ToList();
+            }
+
+            return lista;
+        }
+
     }
 }
